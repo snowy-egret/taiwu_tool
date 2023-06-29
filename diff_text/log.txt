@@ -1,0 +1,10 @@
+파일 이름: AvatarHairColors_language
+	구버전에만 있는 텍스트:
+	test2
+	test5
+
+	신버전에만 있는 텍스트:
+	test2-edit
+	test8
+
+
