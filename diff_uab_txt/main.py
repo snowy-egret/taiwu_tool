@@ -1,8 +1,10 @@
 import os
 
+
 def printwrite(text):
     log.write(f"{text}\n")
     print(text)
+
 
 def difffile(old, new):
     # 구버전 텍스트 파일 읽기
@@ -22,10 +24,10 @@ def difffile(old, new):
     # Error Handling: 차이점이 없을 경우 패스
     if len(only_old) == 0 and len(only_new) == 0:
         return None
-    
+
     # 파일 이름 전처리
     try:
-        filename = os.path.splitext(new)[0].split('-CAB')[0]
+        filename = os.path.splitext(new)[0].split("-CAB")[0]
     except:
         filename = os.path.splitext(new)[0]
 
@@ -41,6 +43,7 @@ def difffile(old, new):
         for i in only_new:
             printwrite(f"\t{i}")
     printwrite("\n")
+
 
 if __name__ == "__main__":
     # 작업 디렉토리 설정
@@ -58,11 +61,11 @@ if __name__ == "__main__":
         printwrite(f"구버전: {len(old_list)}개")
         printwrite(f"신버전: {len(new_list)}개")
         log.close()
-        input("아무 키나 눌러 종료하세요...")
+        input("엔터 키를 눌러 종료하세요...")
         exit()
 
     for i in range(len(old_list)):
         difffile(old_list[i], new_list[i])
 
     log.close()
-    input("작업을 완료했습니다. 종료하려면 엔터를 누르세요...")
+    input("작업이 완료되었습니다. 엔터 키를 눌러 종료하세요...")
