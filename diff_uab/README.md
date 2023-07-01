@@ -1,4 +1,4 @@
-## diff\_uab\_txt
+## diff\_uab
 
 구버전/신버전 게임의 uab 파일에서 내보낸 textasset을 대조하여 어떤 라인이 추가/삭제됐는지 알려줍니다.
 
@@ -16,6 +16,13 @@
 1.  **txt\_files\_old**에 구버전 텍스트, **txt\_files\_new**에 신버전 텍스트를 넣은 후
 2.  cmd/powershell을 열어서 main.py가 있는 폴더까지 이동하고
 3.  명령어 실행: **python main.py**
+
+### **파일 설명**
+
+*   (폴더) txt\_files\_old: 구버전 텍스트를 넣는 폴더
+*   (폴더) txt\_files\_new :  신버전 텍스트를 넣는 폴더
+*   (파일) log.txt: 프로그램 실행 시 찍히는 로그
+*   (파일) main.py: 작업 프로그램
 
 ### input/output 형식
 
